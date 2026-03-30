@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "InventoryItem": {
+      "title": "Inventory Item",
+      "description": "A networking device in the ICS_IT inventory.",
+      "type": "object",
+      "properties": {
+        "deviceName": { "type": "string", "description": "Name of the device (e.g., HUAWEI ROUTER)" },
+        "serialNumber": { "type": "string", "description": "Serial number of the device" },
+        "type": { "type": "string", "description": "Type of device (e.g., ROUTER, SWITCH, SFP)" },
+        "location": { "type": "string", "description": "Location of the device (e.g., ICS_IT, DATA CENTER)" },
+        "notes": { "type": "string", "description": "Additional notes or specific location details" },
+        "status": { "type": "string", "description": "Current status (e.g., ACTIVE, INACTIVE)" },
+        "remarks": { "type": "string", "description": "Any additional remarks" },
+        "checkedDate": { "type": "string", "description": "The date the device was last checked" },
+        "responsiblePerson": { "type": "string", "description": "The person responsible for this item" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "When this record was created" },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "When this record was last updated" },
+        "createdBy": { "type": "string", "description": "UID of the user who created this record" }
+      },
+      "required": ["deviceName", "serialNumber", "type", "location", "status", "responsiblePerson"]
+    }
+  },
+  "firestore": {
+    "/inventory": {
+      "schema": "InventoryItem",
+      "description": "Collection of all inventory items."
+    }
+  }
+}

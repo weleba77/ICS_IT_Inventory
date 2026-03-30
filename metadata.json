@@ -1,0 +1,5 @@
+{
+  "name": "ICS_IT Inventory",
+  "description": "A web-based system to register and manage networking device inventory, featuring AI-powered image scanning for data entry.",
+  "requestFramePermissions": []
+}
